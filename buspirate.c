@@ -201,6 +201,8 @@ static char *buspirate_readline_noexit(struct programmer_t *pgm, char *buf, size
 			continue;
 		if (*buf_p == '\n')
 			break;
+		if (*buf_p == '>')
+			break;
 		if (*buf_p == EOF) {
 			*buf_p = '\0';
 			break;
